@@ -1,27 +1,27 @@
-#node-app
---- 
+---
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
-  labels: 
+metadata:
+  labels:
     author: ramesh
     type: proxyserver
   name: node-deployment
-spec: 
+spec:
   replicas: 1
-  selector: 
-    matchLabels: 
+  selector:
+    matchLabels:
       type: proxyserver
-  template: 
-    metadata: 
-      labels: 
+  template:
+    metadata:
+      labels:
         type: proxyserver
       name: node-pod
-    spec: 
-      containers: 
-        - 
+    spec:
+      containers:
+        -
           image: "rameshn1990/nodeapps:1.0"
           name: nodeapp
-          ports: 
-            - containerPort: 3000
+          ports:
+            -
+              containerPort: 3000
               hostPort: 5000
