@@ -23,6 +23,5 @@ spec:
           image: "rameshn1990/nodeapps:1.0"
           name: nodeapp
           ports: 
-            - 
-              containerPort: 3000
+            - containerPort: 3000
               hostPort: 5000
